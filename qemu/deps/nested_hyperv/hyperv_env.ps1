@@ -123,7 +123,7 @@ function InstallRolesAndFeatures(){
         if (-not $hypervFeature.Installed){
             $feature = Install-WindowsFeature -Name "Hyper-V" -IncludeAllSubfeature -IncludeManagementTools
             if (-not $feature.Success){
-                Throw "Error: Unable to install the Hyper-V roles" }
+                Throw "Error: Unable to install the Hyper-V roles"
             }else{
                 Write-Host "Info: Have executed Install-WindowsFeature successfully"
             }
